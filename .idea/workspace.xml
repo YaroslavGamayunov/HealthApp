@@ -9,7 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="893642a7-795e-4a52-b9fd-438d5c874c35" name="Changes" comment="Add firebase firestore and auth dependencies">
+    <list default="true" id="893642a7-795e-4a52-b9fd-438d5c874c35" name="Changes" comment="Add navigation and base screens">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppDestinations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppDestinations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppNavHost.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/chat/ChatScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/questions/ChatScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,21 +26,32 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/yaroslavgamayunov/.android/avd/Pixel_2_API_27.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CT22J8NJL]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;YaroslavGamayunov&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "YaroslavGamayunov"
+    }
+  ],
+  "lastFilter": {
+    "assignee": "YaroslavGamayunov"
   }
-}</component>
+}]]></component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="79c749fe8be2150aa77b6287241f3e46f30a4e44" />
   </component>
@@ -64,15 +81,19 @@
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/yaroslavgamayunov/Documents/portfolio/MentalHealth/app/src/main/java/com/yaroslavgamayunov/mentalhealth/presentation",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/mentalhealth/presentation" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.MainActivity">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
       <module name="MentalHealth.app.main" />
       <option name="DEPLOY" value="true" />
@@ -141,7 +162,7 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="MentalHealth.app.main" />
+      <module name="HealthApp.app.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -254,7 +275,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710852650319</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add firebase firestore and auth dependencies">
+      <option name="closed" value="true" />
+      <created>1710852712936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710852712937</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add navigation and base screens">
+      <option name="closed" value="true" />
+      <created>1710880635481</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710880635481</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +310,7 @@
     <MESSAGE value="Add compose navigation dependency" />
     <MESSAGE value="Add missing files" />
     <MESSAGE value="Add firebase firestore and auth dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add firebase firestore and auth dependencies" />
+    <MESSAGE value="Add navigation and base screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add navigation and base screens" />
   </component>
 </project>

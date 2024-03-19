@@ -1,4 +1,4 @@
-package com.yaroslavgamayunov.mentalhealth
+package com.yaroslavgamayunov.healthapp
 
 import org.junit.Test
 

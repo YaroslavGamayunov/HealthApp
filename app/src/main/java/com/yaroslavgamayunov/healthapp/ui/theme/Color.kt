@@ -1,4 +1,4 @@
-package com.yaroslavgamayunov.mentalhealth.ui.theme
+package com.yaroslavgamayunov.healthapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

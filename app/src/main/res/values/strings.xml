@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MentalHealth</string>
+    <string name="app_name">HealthApp</string>
+
+    <string name="home_screen">Home</string>
+    <string name="questions_screen">Questions</string>
+    <string name="goals_screen">Goals</string>
+    <string name="profile_screen">Profile</string>
+
 </resources>

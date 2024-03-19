@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.yaroslavgamayunov.mentalhealth"
+    namespace = "com.yaroslavgamayunov.healthapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.yaroslavgamayunov.mentalhealth"
+        applicationId = "com.yaroslavgamayunov.healthapp"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -61,6 +61,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.compose.icons.core)
+    implementation(libs.androidx.compose.icons.extended)
 
     // Firebase
     implementation(platform(libs.google.firebase.bom))
