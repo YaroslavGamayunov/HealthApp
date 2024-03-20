@@ -64,6 +64,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.icons.core)
     implementation(libs.androidx.compose.icons.extended)
+    implementation(libs.androidx.compose.constraintlayout)
 
     // Facebook
     debugImplementation(libs.facebook.flipper)

@@ -53,7 +53,7 @@ fun ActivityItem(
     widthDp = 360
 )
 @Composable
-fun ActivityItemPreview() {
+private fun PreviewActivityItem() {
     Row(
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {

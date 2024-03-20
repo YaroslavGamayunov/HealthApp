@@ -13,6 +13,7 @@ googleServices = "4.4.1"
 firebaseBom = "32.7.4"
 flipperVersion = "0.250.0"
 soloaderVersion = "0.10.5"
+composeConstraintLayout = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,6 +25,7 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-compose-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-compose-icons-core = { group = "androidx.compose.material", name = "material-icons-core" }
+androidx-compose-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "composeConstraintLayout" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -38,6 +40,7 @@ google-firebase-firestore = { group = "com.google.firebase", name = "firebase-fi
 facebook-flipper = { group = "com.facebook.flipper", name = "flipper", version.ref = "flipperVersion" }
 facebook-flipper-noop = { group = "com.facebook.flipper", name = "flipper-noop", version.ref = "flipperVersion" }
 facebook-soloader = { group = "com.facebook.soloader", name = "soloader", version.ref = "soloaderVersion" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

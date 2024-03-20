@@ -6,4 +6,6 @@
     <string name="goals_screen">Goals</string>
     <string name="profile_screen">Profile</string>
 
+    <string name="accessibility_send_message">Send message</string>
+
 </resources>
