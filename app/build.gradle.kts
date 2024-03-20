@@ -38,6 +38,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -63,6 +64,11 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.icons.core)
     implementation(libs.androidx.compose.icons.extended)
+
+    // Facebook
+    debugImplementation(libs.facebook.flipper)
+    debugImplementation(libs.facebook.soloader)
+    releaseImplementation(libs.facebook.flipper.noop)
 
     // Firebase
     implementation(platform(libs.google.firebase.bom))

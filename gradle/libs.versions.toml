@@ -11,6 +11,8 @@ composeBom = "2024.02.02"
 navigationComposeVersion = "2.7.7"
 googleServices = "4.4.1"
 firebaseBom = "32.7.4"
+flipperVersion = "0.250.0"
+soloaderVersion = "0.10.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -20,8 +22,8 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
-androidx-compose-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended"}
-androidx-compose-icons-core = { group = "androidx.compose.material", name = "material-icons-core"}
+androidx-compose-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidx-compose-icons-core = { group = "androidx.compose.material", name = "material-icons-core" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -33,6 +35,9 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 google-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 google-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+facebook-flipper = { group = "com.facebook.flipper", name = "flipper", version.ref = "flipperVersion" }
+facebook-flipper-noop = { group = "com.facebook.flipper", name = "flipper-noop", version.ref = "flipperVersion" }
+facebook-soloader = { group = "com.facebook.soloader", name = "soloader", version.ref = "soloaderVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
