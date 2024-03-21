@@ -11,7 +11,7 @@ import com.yaroslavgamayunov.healthapp.presentation.HealthAppNavHost
 import com.yaroslavgamayunov.healthapp.presentation.HealthAppTabRow
 import com.yaroslavgamayunov.healthapp.presentation.healthAppTabRowScreens
 import com.yaroslavgamayunov.healthapp.presentation.navigateSingleTopTo
-import com.yaroslavgamayunov.healthapp.ui.theme.HealthAppTheme
+import com.yaroslavgamayunov.healthapp.presentation.theme.HealthAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

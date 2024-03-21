@@ -1,4 +1,4 @@
-package com.yaroslavgamayunov.healthapp.ui.theme
+package com.yaroslavgamayunov.healthapp.presentation.theme
 
 import android.app.Activity
 import android.os.Build

@@ -22,15 +22,17 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ActivityItem(
     modifier: Modifier = Modifier,
+    onClick: () -> Unit,
     title: String,
     icon: ImageVector,
     status: String,
     goal: String,
-    progress: Float,
+    progress: Float
 ) {
     Card(
         modifier = modifier,
         shape = RoundedCornerShape(12.dp),
+        onClick = onClick
     ) {
         Column(
             modifier = Modifier.padding(all = 8.dp)
@@ -63,7 +65,8 @@ private fun PreviewActivityItem() {
             icon = Icons.Filled.SportsTennis,
             goal = "Goal: 15000 Steps",
             status = "5349",
-            progress = 0.34f
+            progress = 0.34f,
+            onClick = {}
         )
 
         ActivityItem(
@@ -72,7 +75,8 @@ private fun PreviewActivityItem() {
             icon = Icons.Filled.SportsTennis,
             goal = "Goal: 15000 Steps",
             status = "5349",
-            progress = 0.34f
+            progress = 0.34f,
+            onClick = {}
         )
     }
 }

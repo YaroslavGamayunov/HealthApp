@@ -5,6 +5,7 @@
     <string name="questions_screen">Questions</string>
     <string name="goals_screen">Goals</string>
     <string name="profile_screen">Profile</string>
+    <string name="steps_screen">Steps</string>
 
     <string name="accessibility_send_message">Send message</string>
 

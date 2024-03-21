@@ -7,6 +7,8 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.QuestionAnswer
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 import com.yaroslavgamayunov.healthapp.R
 
 /**
@@ -16,6 +18,7 @@ import com.yaroslavgamayunov.healthapp.R
 interface HealthAppDestination {
     val icon: ImageVector
     val route: String
+
     @get:StringRes
     val labelRes: Int
 }
@@ -47,5 +50,21 @@ object Profile : HealthAppDestination {
     override val labelRes = R.string.profile_screen
 }
 
+object ActivityChart {
+    enum class Type(@StringRes val labelRes: Int) {
+        Steps(R.string.steps_screen)
+    }
+
+    const val route = "activity"
+    const val activityTypeArg = "activity_type"
+    val routeWithArgs = "$route/{$activityTypeArg}"
+    val arguments = listOf(
+        navArgument(activityTypeArg) {
+            type = NavType.StringType
+        }
+    )
+}
+
+
 // Screens to be displayed in the top HealthAppTabRow
-val healthAppTabRowScreens = listOf(Home, Questions, Goals, Profile)
+val healthAppTabRowScreens = listOf(Home, Goals, Profile)

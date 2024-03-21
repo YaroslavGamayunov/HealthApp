@@ -3,31 +3,49 @@ package com.yaroslavgamayunov.healthapp.presentation.home
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.GridItemSpan
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridItemSpan
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SportsTennis
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import com.yaroslavgamayunov.healthapp.presentation.ActivityChart
+import com.yaroslavgamayunov.healthapp.presentation.Questions
 import com.yaroslavgamayunov.healthapp.presentation.home.widgets.ActivityItem
+import com.yaroslavgamayunov.healthapp.presentation.home.widgets.QuestionsItem
+import com.yaroslavgamayunov.healthapp.presentation.navigateToActivityChart
 
 @Composable
-fun HomeScreen() {
-    LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = 120.dp),
+fun HomeScreen(navController: NavHostController) {
+    LazyVerticalStaggeredGrid(
+        columns = StaggeredGridCells.Adaptive(minSize = 180.dp),
         contentPadding = PaddingValues(all = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalItemSpacing = 8.dp
     ) {
-        item(span = { GridItemSpan(3) }) {
-            Column {
-                Text("Hello, Yaroslav!", fontSize = 32.sp, fontWeight = FontWeight.Bold)
-                Text("You are doing good today!")
+        item(span = StaggeredGridItemSpan.FullLine) {
+            Column(modifier = Modifier.padding(vertical = 16.dp)) {
+                Text("Привет, Ярослав!", style = MaterialTheme.typography.displayMedium)
+                Spacer(modifier = Modifier.height(8.dp))
+                Text("Сегодня ты молодец!", style = MaterialTheme.typography.titleLarge)
             }
+        }
+        item {
+            QuestionsItem(
+                title = "Задать вопросы ИИ-помощнику",
+                subTitle = "Получите полезные ответы о здоровье",
+                onClick = {
+                    navController.navigate(Questions.route)
+                }
+            )
         }
         items(20) {
             ActivityItem(
@@ -35,7 +53,10 @@ fun HomeScreen() {
                 icon = Icons.Filled.SportsTennis,
                 goal = "Goal: 15000 Steps",
                 status = "5349",
-                progress = 0.34f
+                progress = 0.34f,
+                onClick = {
+                    navController.navigateToActivityChart(ActivityChart.Type.Steps)
+                }
             )
         }
     }
