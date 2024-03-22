@@ -7,6 +7,7 @@ import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.flipper.plugins.inspector.DescriptorMapping
 import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin
 import com.facebook.soloader.SoLoader
+import com.yaroslavgamayunov.healthapp.data.HealthConnectManager
 
 class HealthAppApplication : Application() {
     override fun onCreate() {
@@ -18,5 +19,9 @@ class HealthAppApplication : Application() {
             client.addPlugin(InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()))
             client.start()
         }
+    }
+
+    val healthConnectManager by lazy {
+        HealthConnectManager(this)
     }
 }

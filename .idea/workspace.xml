@@ -9,22 +9,41 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="893642a7-795e-4a52-b9fd-438d5c874c35" name="Changes" comment="Chat screen v1">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/ActivityChart.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/ActivityChartScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/ActivityProgress.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/widgets/QuestionsItem.kt" afterDir="false" />
+    <list default="true" id="893642a7-795e-4a52-b9fd-438d5c874c35" name="Changes" comment="Activity chart screen v1">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/ExerciseSession.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/ExerciseSessionData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/HealthConnectAppInfo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/HealthConnectManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/HealthConnectUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/SleepSessionData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/WeightData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppRootNavHost.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/Screen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsUiState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome/InstalledMessage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome/NotInstalledMessage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome/NotSupportedMessage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome/WelcomeScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_health_connect_logo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/HealthAppApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/HealthAppApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppDestinations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppDestinations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppNavHost.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/widgets/ActivityItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/widgets/ActivityItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/ui/theme/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Color.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Theme.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/ui/theme/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContentNavHost.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/ActivityChart.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/ActivityChart.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/ActivityChartScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsChartScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Color.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/theme/Theme.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +53,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/yaroslavgamayunov/.android/avd/Pixel_2_API_27.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CT22J8NJL]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -51,16 +70,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "assignee": "YaroslavGamayunov"
+      &quot;assignee&quot;: &quot;YaroslavGamayunov&quot;
     }
   ],
-  "lastFilter": {
-    "assignee": "YaroslavGamayunov"
+  &quot;lastFilter&quot;: {
+    &quot;assignee&quot;: &quot;YaroslavGamayunov&quot;
   }
-}]]></component>
+}</component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="b2d193682eb60858623e15d14f6d359d60ab61b3" />
   </component>
@@ -84,101 +103,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/yaroslavgamayunov/Documents/portfolio/MentalHealth/app/src/main/java/com/yaroslavgamayunov/healthapp/ui/theme",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DEBUGGABLE_DEVICE&quot;: &quot;samsung-sm_s908b-R5CT22J8NJL&quot;,
+    &quot;DEBUGGABLE_PROCESS&quot;: &quot;com.yaroslavgamayunov.healthapp&quot;,
+    &quot;DEBUGGER_ID&quot;: &quot;Auto&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHOW_ALL_PROCESSES&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yaroslavgamayunov/Documents/portfolio/MentalHealth/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/ui/theme" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/mentalhealth/presentation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/welcome" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/navigation" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
-    <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
-      <module name="MentalHealth.app.main" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="false" />
-      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
-      <option name="CLEAR_APP_STORAGE" value="false" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="specific_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="com.yaroslavgamayunov.mentalhealth.MainActivity" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
-      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="HealthApp.app.main" />
       <option name="DEPLOY" value="true" />
@@ -310,6 +271,74 @@
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <compose-preview-run-configuration composable-fqn="com.yaroslavgamayunov.healthapp.presentation.home.widgets.ActivityItemKt.ActivityItemPreview" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PreviewActivityChart" type="ComposePreviewRunConfiguration" temporary="true">
+      <module name="HealthApp.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.yaroslavgamayunov.healthapp.presentation.activity.ActivityChartKt.PreviewActivityChart" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="com.yaroslavgamayunov.healthapp.presentation.activity.ActivityChartKt.PreviewActivityChart" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -520,11 +549,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Compose Preview.PreviewActivityChart" />
         <item itemvalue="Compose Preview.PreviewActivityItem" />
         <item itemvalue="Compose Preview.PreviewChatBox" />
         <item itemvalue="Compose Preview.previewQuestionItem" />
         <item itemvalue="Compose Preview.ActivityItemPreview" />
-        <item itemvalue="Android App.MainActivity" />
       </list>
     </recent_temporary>
   </component>
@@ -625,7 +654,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710945202373</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Activity chart screen v1">
+      <option name="closed" value="true" />
+      <created>1711012598001</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711012598001</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,18 +684,74 @@
     <MESSAGE value="Add navigation and base screens" />
     <MESSAGE value="HomeScreen v1" />
     <MESSAGE value="Chat screen v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chat screen v1" />
+    <MESSAGE value="Activity chart screen v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Activity chart screen v1" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppNavHost.kt</url>
-          <line>40</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContentNavHost.kt</url>
+          <line>55</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>165</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>167</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>163</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>161</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>159</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/HealthConnectManager.kt</url>
+          <line>350</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>39</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/HealthConnectManager.kt</url>
+          <line>345</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/HealthConnectManager.kt</url>
+          <line>360</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/steps/StepsViewModel.kt</url>
+          <line>110</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="AndroidRunConfigurationType">
+        <watch expression="navController.currentDestination?.route" language="kotlin" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

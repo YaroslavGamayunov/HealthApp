@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.androidx.compose.icons.core)
     implementation(libs.androidx.compose.icons.extended)
     implementation(libs.androidx.compose.constraintlayout)
+    implementation(libs.androidx.health.connect)
 
     // Facebook
     debugImplementation(libs.facebook.flipper)

@@ -51,8 +51,8 @@ object Profile : HealthAppDestination {
 }
 
 object ActivityChart {
-    enum class Type(@StringRes val labelRes: Int) {
-        Steps(R.string.steps_screen)
+    enum class Type {
+        Steps
     }
 
     const val route = "activity"
