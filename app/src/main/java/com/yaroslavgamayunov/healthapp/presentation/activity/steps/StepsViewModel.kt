@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.RemoteException
 import android.text.format.DateFormat
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.health.connect.client.permission.HealthPermission
@@ -48,6 +49,12 @@ class StepsViewModel(
     var stepsList: List<ActivityItemUiDto> by mutableStateOf(listOf())
         private set
 
+    var stepsGoal: Int by mutableIntStateOf(5000) // todo load goal
+        private set
+
+    var isShowingGoalEdit: Boolean by mutableStateOf(false)
+        private set
+
     var selectedDay: String by mutableStateOf("")
         private set
 
@@ -80,10 +87,9 @@ class StepsViewModel(
         selectedDay = updatedStepsList[index].longDate
         stepsList = updatedStepsList
         progressUiDto = ActivityProgressUiDto(
-            value = updatedStepsList[index].value.toInt().toString()
-                ?: "Нет данных", // todo put into strings.xml
-            goal = "5000 Шагов", // todo get goal from firebase/from health connect
-            progress = updatedStepsList[index].value / 5000 // todo get goal from firebase/health connect
+            value = updatedStepsList[index].value.toInt().toString(), // todo put into strings.xml
+            goal = "$stepsGoal шагов", // todo get goal from firebase/from health connect
+            progress = updatedStepsList[index].value / stepsGoal // todo get goal from firebase/health connect
         )
     }
 
@@ -117,6 +123,20 @@ class StepsViewModel(
 
     fun onChartItemClick(index: Int) {
         setSelectedItem(index)
+    }
+
+    fun onEditGoalClick() {
+        isShowingGoalEdit = true
+    }
+
+    fun saveGoal(newGoal: Int) {
+        // todo save to firebase
+        stepsGoal = newGoal
+        isShowingGoalEdit = false
+        progressUiDto = progressUiDto?.copy(
+            goal = "$stepsGoal шагов", // todo
+            progress = stepsList[selectedIndex].value / newGoal // todo get goal from firebase/health connect
+        )
     }
 
     private suspend fun readStepsData() {

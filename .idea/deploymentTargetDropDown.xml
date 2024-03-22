@@ -2,9 +2,6 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="ActivityItemPreview">
-        <State />
-      </entry>
       <entry key="PreviewActivityChart">
         <State />
       </entry>
@@ -12,6 +9,9 @@
         <State />
       </entry>
       <entry key="PreviewChatBox">
+        <State />
+      </entry>
+      <entry key="PreviewStepsGoal">
         <State />
       </entry>
       <entry key="app">
