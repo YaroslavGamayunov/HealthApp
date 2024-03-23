@@ -52,7 +52,7 @@ object Profile : HealthAppDestination {
 
 object ActivityChart {
     enum class Type {
-        Steps
+        Steps, Weight
     }
 
     const val route = "activity"

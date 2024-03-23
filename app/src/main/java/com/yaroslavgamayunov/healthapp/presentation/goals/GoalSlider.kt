@@ -9,7 +9,7 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -20,12 +20,13 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun GoalSlider(
     modifier: Modifier = Modifier,
-    initialValue: Int,
-    goalText: (Int) -> String,
-    onSave: (Int) -> Unit,
+    initialValue: Float,
+    maxValue: Float,
+    goalText: (Float) -> String,
+    onSave: (Float) -> Unit,
 ) {
     var value by remember {
-        mutableIntStateOf(initialValue)
+        mutableFloatStateOf(initialValue)
     }
 
     Card(modifier = modifier) {
@@ -38,11 +39,12 @@ fun GoalSlider(
             style = MaterialTheme.typography.titleLarge
         )
         Slider(
+            valueRange = 0.001f..1f,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp),
-            value = value.toFloat() / 30000,
-            onValueChange = { value = (it * 30000).toInt() }
+            value = value / maxValue,
+            onValueChange = { value = (it * maxValue) }
         )
         if (value != initialValue) {
             Button(
@@ -62,9 +64,10 @@ fun GoalSlider(
 fun PreviewStepsGoal() {
     GoalSlider(
         modifier = Modifier.padding(16.dp),
-        initialValue = 1000,
+        initialValue = 1000f,
         goalText = { value ->
-            "$value шагов"
+            "${value.toInt()} шагов"
         },
+        maxValue = 10000f,
         onSave = {})
 }

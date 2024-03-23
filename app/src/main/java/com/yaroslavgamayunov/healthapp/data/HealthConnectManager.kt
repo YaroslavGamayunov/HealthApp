@@ -371,9 +371,10 @@ class HealthConnectManager(private val context: Context) {
     /**
      * Writes [WeightRecord] to Health Connect.
      */
-    suspend fun writeWeightInput(weight: WeightRecord) {
+    suspend fun writeWeightInput(weight: WeightRecord): InsertRecordsResponse {
         val records = listOf(weight)
-        healthConnectClient.insertRecords(records)
+        val response = healthConnectClient.insertRecords(records)
+        return response
     }
 
     /**

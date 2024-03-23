@@ -130,12 +130,13 @@ fun StepsChartScreen(
                                         )
                                     )
                                     GoalSlider(
-                                        initialValue = viewModel.stepsGoal,
+                                        initialValue = viewModel.stepsGoal.toFloat(),
                                         goalText = { value ->
-                                            "$value шагов"
+                                            "${value.toInt()} шагов"
                                         },
+                                        maxValue = 30000f,
                                         onSave = { goal ->
-                                            viewModel.saveGoal(goal)
+                                            viewModel.saveGoal(goal.toInt())
                                         }
                                     )
                                 }

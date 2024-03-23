@@ -15,6 +15,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.yaroslavgamayunov.healthapp.presentation.ActivityChart
@@ -26,7 +27,7 @@ import com.yaroslavgamayunov.healthapp.presentation.navigateToActivityChart
 @Composable
 fun HomeScreen(navController: NavHostController) {
     LazyVerticalStaggeredGrid(
-        columns = StaggeredGridCells.Adaptive(minSize = 180.dp),
+        columns = StaggeredGridCells.Adaptive(minSize = 120.dp),
         contentPadding = PaddingValues(all = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalItemSpacing = 8.dp
@@ -49,11 +50,25 @@ fun HomeScreen(navController: NavHostController) {
         }
         items(20) {
             ActivityItem(
+                title = "Вес",
+                icon = Icons.Filled.SportsTennis,
+                goal = "/40 кг",
+                status = "20",
+                progress = 0.34f,
+                iconBackgroundColor = Color.Green,
+                onClick = {
+                    navController.navigateToActivityChart(ActivityChart.Type.Weight)
+                }
+            )
+        }
+        items(20) {
+            ActivityItem(
                 title = "Steps",
                 icon = Icons.Filled.SportsTennis,
                 goal = "Goal: 15000 Steps",
                 status = "5349",
                 progress = 0.34f,
+                iconBackgroundColor = Color.Green,
                 onClick = {
                     navController.navigateToActivityChart(ActivityChart.Type.Steps)
                 }

@@ -28,8 +28,7 @@ import java.util.Date
 class StepsViewModel(
     private val healthConnectManager: HealthConnectManager,
     private val applicationContext: Context,
-) :
-    ViewModel() {
+) : ViewModel() {
     private val healthConnectCompatibleApps = healthConnectManager.healthConnectCompatibleApps
 
     val permissions = setOf(

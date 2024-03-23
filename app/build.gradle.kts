@@ -77,6 +77,12 @@ dependencies {
     implementation(libs.google.firebase.auth)
     implementation(libs.google.firebase.firestore)
 
+    //Charts
+    implementation(libs.vico.compose.m2)
+    implementation(libs.vico.compose.m3)
+    implementation(libs.vico.compose)
+    implementation(libs.vico.core)
+    implementation(libs.vico.views)
 
     // Test dependencies
     testImplementation(libs.junit)

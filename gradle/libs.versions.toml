@@ -15,6 +15,7 @@ flipperVersion = "0.250.0"
 soloaderVersion = "0.10.5"
 composeConstraintLayout = "1.0.1"
 healthConnect = "1.1.0-alpha07"
+vico = "2.0.0-alpha.12"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,7 +43,11 @@ google-firebase-firestore = { group = "com.google.firebase", name = "firebase-fi
 facebook-flipper = { group = "com.facebook.flipper", name = "flipper", version.ref = "flipperVersion" }
 facebook-flipper-noop = { group = "com.facebook.flipper", name = "flipper-noop", version.ref = "flipperVersion" }
 facebook-soloader = { group = "com.facebook.soloader", name = "soloader", version.ref = "soloaderVersion" }
-
+vico-compose = { group = "com.patrykandpatrick.vico", name = "compose", version.ref = "vico" }
+vico-compose-m3 = { group = "com.patrykandpatrick.vico", name = "compose-m3", version.ref = "vico" }
+vico-compose-m2 = { group = "com.patrykandpatrick.vico", name = "compose-m2", version.ref = "vico" }
+vico-core = { group = "com.patrykandpatrick.vico", name = "core", version.ref = "vico" }
+vico-views = { group = "com.patrykandpatrick.vico", name = "views", version.ref = "vico" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

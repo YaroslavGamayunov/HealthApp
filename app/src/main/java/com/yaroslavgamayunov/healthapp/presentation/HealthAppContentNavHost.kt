@@ -13,6 +13,9 @@ import com.yaroslavgamayunov.healthapp.data.HealthConnectManager
 import com.yaroslavgamayunov.healthapp.presentation.activity.steps.StepsChartScreen
 import com.yaroslavgamayunov.healthapp.presentation.activity.steps.StepsViewModel
 import com.yaroslavgamayunov.healthapp.presentation.activity.steps.StepsViewModelFactory
+import com.yaroslavgamayunov.healthapp.presentation.activity.weight.WeightChartScreen
+import com.yaroslavgamayunov.healthapp.presentation.activity.weight.WeightViewModel
+import com.yaroslavgamayunov.healthapp.presentation.activity.weight.WeightViewModelFactory
 import com.yaroslavgamayunov.healthapp.presentation.goals.GoalsScreen
 import com.yaroslavgamayunov.healthapp.presentation.home.HomeScreen
 import com.yaroslavgamayunov.healthapp.presentation.profile.ProfileScreen
@@ -51,6 +54,7 @@ fun HealthAppContentNavHost(
 
             when (activityType) {
                 ActivityChart.Type.Steps -> StepsChartContent(navController, healthConnectManager)
+                ActivityChart.Type.Weight -> WeightChartContent(navController, healthConnectManager)
             }
         }
     }
@@ -73,6 +77,31 @@ fun StepsChartContent(
             onPermissionsResult()
         }
     StepsChartScreen(
+        viewModel = viewModel,
+        navController = navController,
+        onPermissionsResult = onPermissionsResult,
+        onPermissionsLaunch = { values ->
+            permissionsLauncher.launch(values)
+        })
+}
+
+@Composable
+fun WeightChartContent(
+    navController: NavHostController,
+    healthConnectManager: HealthConnectManager,
+) {
+    val viewModel: WeightViewModel = viewModel(
+        factory = WeightViewModelFactory(
+            healthConnectManager = healthConnectManager,
+            applicationContext = LocalContext.current.applicationContext
+        )
+    )
+    val onPermissionsResult = { viewModel.initialLoad() }
+    val permissionsLauncher =
+        rememberLauncherForActivityResult(viewModel.permissionsLauncher) {
+            onPermissionsResult()
+        }
+    WeightChartScreen(
         viewModel = viewModel,
         navController = navController,
         onPermissionsResult = onPermissionsResult,

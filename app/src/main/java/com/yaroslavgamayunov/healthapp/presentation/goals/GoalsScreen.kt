@@ -32,11 +32,12 @@ fun GoalsScreen() {
                         style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
                     )
                     GoalSlider(
-                        initialValue = 3000,
+                        initialValue = 3000f, // todo get from firebase
+                        maxValue = 30000f,
                         onSave = { steps ->
                         },
                         goalText = { value ->
-                            "$value шагов"
+                            "${value.toInt()} шагов"
                         }
                     )
                 }
