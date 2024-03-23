@@ -10,6 +10,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.yaroslavgamayunov.healthapp.data.HealthConnectManager
+import com.yaroslavgamayunov.healthapp.presentation.activity.calories.CaloriesChartScreen
+import com.yaroslavgamayunov.healthapp.presentation.activity.calories.CaloriesViewModel
+import com.yaroslavgamayunov.healthapp.presentation.activity.calories.CaloriesViewModelFactory
 import com.yaroslavgamayunov.healthapp.presentation.activity.steps.StepsChartScreen
 import com.yaroslavgamayunov.healthapp.presentation.activity.steps.StepsViewModel
 import com.yaroslavgamayunov.healthapp.presentation.activity.steps.StepsViewModelFactory
@@ -55,6 +58,7 @@ fun HealthAppContentNavHost(
             when (activityType) {
                 ActivityChart.Type.Steps -> StepsChartContent(navController, healthConnectManager)
                 ActivityChart.Type.Weight -> WeightChartContent(navController, healthConnectManager)
+                ActivityChart.Type.Calories -> CaloriesChartContent(navController, healthConnectManager)
             }
         }
     }
@@ -77,6 +81,31 @@ fun StepsChartContent(
             onPermissionsResult()
         }
     StepsChartScreen(
+        viewModel = viewModel,
+        navController = navController,
+        onPermissionsResult = onPermissionsResult,
+        onPermissionsLaunch = { values ->
+            permissionsLauncher.launch(values)
+        })
+}
+
+@Composable
+fun CaloriesChartContent(
+    navController: NavHostController,
+    healthConnectManager: HealthConnectManager,
+) {
+    val viewModel: CaloriesViewModel = viewModel(
+        factory = CaloriesViewModelFactory(
+            healthConnectManager = healthConnectManager,
+            applicationContext = LocalContext.current.applicationContext
+        )
+    )
+    val onPermissionsResult = { viewModel.initialLoad() }
+    val permissionsLauncher =
+        rememberLauncherForActivityResult(viewModel.permissionsLauncher) {
+            onPermissionsResult()
+        }
+    CaloriesChartScreen(
         viewModel = viewModel,
         navController = navController,
         onPermissionsResult = onPermissionsResult,

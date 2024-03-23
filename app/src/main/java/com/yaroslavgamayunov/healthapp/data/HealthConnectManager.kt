@@ -347,6 +347,24 @@ class HealthConnectManager(private val context: Context) {
         }
     }
 
+    suspend fun aggregateCalories(
+        startTime: Instant,
+        endTime: Instant,
+    ): Long? {
+        return try {
+            val response = healthConnectClient.aggregate(
+                AggregateRequest(
+                    metrics = setOf(TotalCaloriesBurnedRecord.ENERGY_TOTAL),
+                    timeRangeFilter = TimeRangeFilter.between(startTime, endTime)
+                )
+            )
+            // The result may be null if no data is available in the time range
+            response[TotalCaloriesBurnedRecord.ENERGY_TOTAL]?.inKilocalories?.toLong()
+        } catch (e: Exception) {
+            null
+        }
+    }
+
     suspend fun aggregateStepsInLastWeek(now: Instant): List<Pair<Instant, Long?>> {
         val startOfCurrentDay = now.truncatedTo(ChronoUnit.DAYS)
         val endOfCurrentDay = now.plus(1, ChronoUnit.DAYS)
@@ -362,6 +380,27 @@ class HealthConnectManager(private val context: Context) {
         val result = mutableListOf<Pair<Instant, Long?>>()
         for ((start, end) in timeRanges) {
             val steps = aggregateSteps(start, end)
+            result += start to steps
+        }
+
+        return result
+    }
+
+    suspend fun aggregateCaloriesInLastWeek(now: Instant): List<Pair<Instant, Long?>> {
+        val startOfCurrentDay = now.truncatedTo(ChronoUnit.DAYS)
+        val endOfCurrentDay = now.plus(1, ChronoUnit.DAYS)
+        val timeRanges = mutableListOf<Pair<Instant, Instant>>()
+        val beginningOfTheWeek = startOfCurrentDay.minus(6, ChronoUnit.DAYS)
+        for (dayIndex in 0 until 6) {
+            val startOfDay = beginningOfTheWeek.plus(dayIndex.toLong(), ChronoUnit.DAYS)
+            val endOfDay = startOfDay.plus(1, ChronoUnit.DAYS)
+            timeRanges += startOfDay to endOfDay
+        }
+        timeRanges += startOfCurrentDay to endOfCurrentDay
+
+        val result = mutableListOf<Pair<Instant, Long?>>()
+        for ((start, end) in timeRanges) {
+            val steps = aggregateCalories(start, end)
             result += start to steps
         }
 

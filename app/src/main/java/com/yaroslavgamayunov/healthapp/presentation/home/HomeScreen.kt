@@ -48,7 +48,20 @@ fun HomeScreen(navController: NavHostController) {
                 }
             )
         }
-        items(20) {
+        items(2) {
+            ActivityItem(
+                title = "Вес",
+                icon = Icons.Filled.SportsTennis,
+                goal = "/2000 калорий",
+                status = "500 калорий",
+                progress = 0.34f,
+                iconBackgroundColor = Color.Cyan,
+                onClick = {
+                    navController.navigateToActivityChart(ActivityChart.Type.Calories)
+                }
+            )
+        }
+        items(2) {
             ActivityItem(
                 title = "Вес",
                 icon = Icons.Filled.SportsTennis,
@@ -61,7 +74,7 @@ fun HomeScreen(navController: NavHostController) {
                 }
             )
         }
-        items(20) {
+        items(2) {
             ActivityItem(
                 title = "Steps",
                 icon = Icons.Filled.SportsTennis,

@@ -8,6 +8,7 @@
     <string name="steps_screen">Steps</string>
     <string name="weight_screen">Weight</string>
     <string name="registration_screen">Registration</string>
+    <string name="calories_screen">Calories</string>
 
     <string name="accessibility_send_message">Send message</string>
 
