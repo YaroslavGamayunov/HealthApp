@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yaroslavgamayunov.healthapp.data.HealthConnectManager
 import com.yaroslavgamayunov.healthapp.presentation.activity.ActivityProgressUiDto
+import com.yaroslavgamayunov.healthapp.util.round
 import kotlinx.coroutines.launch
 import java.io.IOException
 import java.time.Instant
@@ -45,7 +46,7 @@ class WeightViewModel(
     var weightList: Map<Instant, Float> by mutableStateOf(mapOf())
         private set
 
-    var weightGoal: Float by mutableFloatStateOf(5000f) // todo load goal
+    var weightGoal: Float by mutableFloatStateOf(90f) // todo load goal
         private set
 
     var isShowingGoalEdit: Boolean by mutableStateOf(false)
@@ -85,7 +86,7 @@ class WeightViewModel(
         isShowingGoalEdit = false
         val lastWeight = weightList.entries.last().value
         progressUiDto = progressUiDto?.copy(
-            goal = "$weightGoal кг", // todo
+            goal = "${weightGoal.round(1)} кг", // todo
             progress = lastWeight / weightGoal // todo get goal from firebase/health connect
         )
     }

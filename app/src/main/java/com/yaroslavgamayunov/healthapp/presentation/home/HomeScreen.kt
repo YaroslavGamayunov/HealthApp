@@ -30,6 +30,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.yaroslavgamayunov.healthapp.data.ExerciseSession
 import com.yaroslavgamayunov.healthapp.presentation.ActivityChart
@@ -41,7 +42,10 @@ import com.yaroslavgamayunov.healthapp.presentation.navigateToActivityChart
 import java.time.Instant
 
 @Composable
-fun HomeScreen(navController: NavHostController) {
+fun HomeScreen(
+    rootNavController: NavController,
+    navController: NavHostController,
+) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(minSize = 120.dp),
         contentPadding = PaddingValues(all = 16.dp),
@@ -60,7 +64,7 @@ fun HomeScreen(navController: NavHostController) {
                 title = "ИИ-помощник",
                 subTitle = "Задайте любой вопрос о здоровье",
                 onClick = {
-                    navController.navigate(Questions.route)
+                    rootNavController.navigate(Questions.route)
                 }
             )
         }
@@ -69,8 +73,8 @@ fun HomeScreen(navController: NavHostController) {
             ActivityItem(
                 title = "Вес",
                 icon = Icons.Filled.MonitorWeight,
-                goal = "Цель: 40 кг",
-                status = "20 кг",
+                goal = "Цель: 90 кг",
+                status = "81 кг",
                 progress = 0.34f,
                 iconBackgroundColor = Color.Cyan,
                 onClick = {
@@ -84,8 +88,8 @@ fun HomeScreen(navController: NavHostController) {
                 title = "Шаги",
                 icon = Icons.AutoMirrored.Filled.DirectionsWalk,
                 goal = "/15000 шагов",
-                status = "5349",
-                progress = 0.34f,
+                status = "0",
+                progress = 0/15000f,
                 iconBackgroundColor = Color.Green,
                 onClick = {
                     navController.navigateToActivityChart(ActivityChart.Type.Steps)
@@ -98,8 +102,8 @@ fun HomeScreen(navController: NavHostController) {
                 title = "Калории",
                 icon = Icons.Filled.LocalFireDepartment,
                 goal = "/2000 калорий",
-                status = "5349",
-                progress = 0.34f,
+                status = "1563",
+                progress = 1563/2000f,
                 iconBackgroundColor = Color.Red,
                 onClick = {
                     navController.navigateToActivityChart(ActivityChart.Type.Calories)
@@ -139,18 +143,50 @@ fun HomeScreen(navController: NavHostController) {
                             RoundedCornerShape(16.dp)
                         )
                 ) {
-                    items(15) {
-                        val time1 = Instant.now()
-                        val time2 = time1.minusSeconds(3600)
+                    item {
+                        val time2 = Instant.now()
+                        val time1 = time2.minusSeconds(3600)
 
                         ExerciseItem(
                             item = ExerciseSession(
                                 startTime = time1,
                                 endTime = time2,
                                 id = "",
-                                title = "Running rueueue",
+                                title = "Ходьба",
                                 distance = "10.4 км",
-                                calories = "444 ккал"
+                                calories = "432 ккал"
+                            )
+                        )
+                    }
+
+                    item {
+                        val time2 = Instant.now().minusSeconds(86400)
+                        val time1 = time2.minusSeconds(3600)
+
+                        ExerciseItem(
+                            item = ExerciseSession(
+                                startTime = time1,
+                                endTime = time2,
+                                id = "",
+                                title = "Прогулка",
+                                distance = "4 км",
+                                calories = "129 ккал"
+                            )
+                        )
+                    }
+
+                    item {
+                        val time2 = Instant.now().minusSeconds(83333)
+                        val time1 = time2.minusSeconds(3600)
+
+                        ExerciseItem(
+                            item = ExerciseSession(
+                                startTime = time1,
+                                endTime = time2,
+                                id = "",
+                                title = "Спорт",
+                                distance = "8 км",
+                                calories = "600 ккал"
                             )
                         )
                     }

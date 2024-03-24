@@ -48,7 +48,7 @@ fun HealthAppContentNavHost(
             )
         }
         composable(route = Profile.route) {
-            ProfileScreen()
+            ProfileScreen(rootNavController = rootNavController)
         }
         composable(
             route = ActivityChart.routeWithArgs,

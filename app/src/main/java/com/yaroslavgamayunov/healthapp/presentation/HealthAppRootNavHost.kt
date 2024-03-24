@@ -9,6 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.yaroslavgamayunov.healthapp.data.HealthConnectManager
+import com.yaroslavgamayunov.healthapp.presentation.auth.LoginScreen
 import com.yaroslavgamayunov.healthapp.presentation.questions.QuestionsScreen
 import com.yaroslavgamayunov.healthapp.presentation.welcome.WelcomeScreen
 
@@ -21,7 +22,7 @@ fun HealthRootNavHost(
     val healthConnectAvailability by healthConnectManager.availability
 
     val startDestination = when {
-        healthConnectAvailability == SDK_AVAILABLE -> Screen.ContentScreen.route
+        healthConnectAvailability == SDK_AVAILABLE -> Screen.LoginScreen.route // todo check auth state
         else -> Screen.WelcomeScreen.route
     }
 
@@ -40,10 +41,17 @@ fun HealthRootNavHost(
             )
         }
         composable(Screen.ContentScreen.route) {
-            HealthAppContent(rootNavController = navController, healthConnectManager = healthConnectManager)
+            HealthAppContent(
+                rootNavController = navController,
+                healthConnectManager = healthConnectManager
+            )
         }
         composable(route = Questions.route) {
             QuestionsScreen(rootNavController = navController, viewModel())
+        }
+
+        composable(Screen.LoginScreen.route) {
+            LoginScreen(rootNavController = navController)
         }
     }
 }

@@ -45,6 +45,7 @@ import androidx.navigation.NavHostController
 import com.yaroslavgamayunov.healthapp.R
 import com.yaroslavgamayunov.healthapp.presentation.activity.ActivityProgress
 import com.yaroslavgamayunov.healthapp.presentation.goals.GoalSlider
+import com.yaroslavgamayunov.healthapp.util.round
 import java.time.Instant
 import java.util.Date
 import java.util.UUID
@@ -239,7 +240,7 @@ fun WeightChartScreen(
                                     GoalSlider(
                                         initialValue = viewModel.weightGoal,
                                         goalText = { value ->
-                                            "$value кг"
+                                            "${value.round(1)} кг"
                                         },
                                         maxValue = 200f,
                                         onSave = { goal ->

@@ -9,13 +9,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="893642a7-795e-4a52-b9fd-438d5c874c35" name="Changes" comment="Add calories screen">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/excercise/ExcersiseItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+    <list default="true" id="893642a7-795e-4a52-b9fd-438d5c874c35" name="Changes" comment="Add mental health test">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/auth/LoginScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/auth/RegistrationScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/util/NumberUtils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/ExerciseSession.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/data/ExerciseSession.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContentNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContentNavHost.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppRootNavHost.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppRootNavHost.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/Screen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/Screen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/weight/WeightChartScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/weight/WeightChartScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/weight/WeightViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/activity/weight/WeightViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/goals/GoalsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/goals/GoalsScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/widgets/QuestionsItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/home/widgets/QuestionsItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/profile/ProfileScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/profile/ProfileScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -84,6 +92,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHOW_ALL_PROCESSES": "false",
+    "ScreenshotViewer.SavePath": "/Users/yaroslavgamayunov/Downloads",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
@@ -674,7 +683,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711234443807</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add excercise items">
+      <option name="closed" value="true" />
+      <created>1711266929166</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711266929167</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add mental health test">
+      <option name="closed" value="true" />
+      <created>1711272082931</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1711272082932</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -701,7 +726,9 @@
     <MESSAGE value="Add steps goal" />
     <MESSAGE value="Add weight screen" />
     <MESSAGE value="Add calories screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add calories screen" />
+    <MESSAGE value="Add excercise items" />
+    <MESSAGE value="Add mental health test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add mental health test" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -709,7 +736,7 @@
       <breakpoints>
         <line-breakpoint type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yaroslavgamayunov/healthapp/presentation/HealthAppContentNavHost.kt</url>
-          <line>61</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint type="kotlin-line">
