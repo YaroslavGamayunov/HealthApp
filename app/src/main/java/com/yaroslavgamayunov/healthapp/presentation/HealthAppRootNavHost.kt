@@ -4,10 +4,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.health.connect.client.HealthConnectClient.Companion.SDK_AVAILABLE
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.yaroslavgamayunov.healthapp.data.HealthConnectManager
+import com.yaroslavgamayunov.healthapp.presentation.questions.QuestionsScreen
 import com.yaroslavgamayunov.healthapp.presentation.welcome.WelcomeScreen
 
 @Composable
@@ -38,7 +40,10 @@ fun HealthRootNavHost(
             )
         }
         composable(Screen.ContentScreen.route) {
-            HealthAppContent(healthConnectManager = healthConnectManager)
+            HealthAppContent(rootNavController = navController, healthConnectManager = healthConnectManager)
+        }
+        composable(route = Questions.route) {
+            QuestionsScreen(rootNavController = navController, viewModel())
         }
     }
 }

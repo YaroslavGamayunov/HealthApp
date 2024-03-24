@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -22,10 +23,10 @@ import com.yaroslavgamayunov.healthapp.presentation.activity.weight.WeightViewMo
 import com.yaroslavgamayunov.healthapp.presentation.goals.GoalsScreen
 import com.yaroslavgamayunov.healthapp.presentation.home.HomeScreen
 import com.yaroslavgamayunov.healthapp.presentation.profile.ProfileScreen
-import com.yaroslavgamayunov.healthapp.presentation.questions.QuestionsScreen
 
 @Composable
 fun HealthAppContentNavHost(
+    rootNavController: NavController,
     navController: NavHostController,
     healthConnectManager: HealthConnectManager,
     modifier: Modifier = Modifier,
@@ -36,13 +37,15 @@ fun HealthAppContentNavHost(
         modifier = modifier
     ) {
         composable(route = Home.route) {
-            HomeScreen(navController)
-        }
-        composable(route = Questions.route) {
-            QuestionsScreen()
+            HomeScreen(
+                rootNavController = rootNavController,
+                navController = navController
+            )
         }
         composable(route = Goals.route) {
-            GoalsScreen()
+            GoalsScreen(
+                navController = navController
+            )
         }
         composable(route = Profile.route) {
             ProfileScreen()
@@ -58,7 +61,10 @@ fun HealthAppContentNavHost(
             when (activityType) {
                 ActivityChart.Type.Steps -> StepsChartContent(navController, healthConnectManager)
                 ActivityChart.Type.Weight -> WeightChartContent(navController, healthConnectManager)
-                ActivityChart.Type.Calories -> CaloriesChartContent(navController, healthConnectManager)
+                ActivityChart.Type.Calories -> CaloriesChartContent(
+                    navController,
+                    healthConnectManager
+                )
             }
         }
     }

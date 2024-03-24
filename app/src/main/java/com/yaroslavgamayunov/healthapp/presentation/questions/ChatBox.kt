@@ -22,7 +22,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun ChatBox(modifier: Modifier = Modifier) {
+fun ChatBox(modifier: Modifier = Modifier, sendText: (String) -> Unit) {
     var chatBoxValue by remember { mutableStateOf(TextFieldValue("")) }
     Row(modifier = modifier) {
         TextField(
@@ -38,7 +38,8 @@ fun ChatBox(modifier: Modifier = Modifier) {
             trailingIcon = {
                 IconButton(
                     onClick = {
-                        // TODO: send the message
+                        sendText(chatBoxValue.text)
+                        chatBoxValue = TextFieldValue("")
                     }
                 ) {
                     Icon(
@@ -48,7 +49,7 @@ fun ChatBox(modifier: Modifier = Modifier) {
                 }
             },
             placeholder = {
-                Text(text = "Type something")
+                Text(text = "Введите вопрос о здоровье")
             }
         )
     }
@@ -59,6 +60,6 @@ fun ChatBox(modifier: Modifier = Modifier) {
 @Composable
 private fun PreviewChatBox() {
     Column(verticalArrangement = Arrangement.Bottom) {
-        ChatBox(modifier = Modifier.fillMaxWidth())
+        ChatBox(modifier = Modifier.fillMaxWidth(), {})
     }
 }
