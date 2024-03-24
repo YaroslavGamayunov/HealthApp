@@ -1,14 +1,15 @@
 package com.yaroslavgamayunov.healthapp.data
 
-import java.time.ZonedDateTime
+import java.time.Instant
 
 /**
  * Represents an exercise session.
  */
 data class ExerciseSession(
-    val startTime: ZonedDateTime,
-    val endTime: ZonedDateTime,
+    val startTime: Instant,
+    val endTime: Instant,
     val id: String,
     val title: String?,
-    val sourceAppInfo: HealthConnectAppInfo?
+    val distance: String?,
+    val calories: String?,
 )

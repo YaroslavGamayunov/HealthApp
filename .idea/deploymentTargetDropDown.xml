@@ -8,16 +8,29 @@
       <entry key="PreviewActivityItem">
         <State />
       </entry>
-      <entry key="PreviewChatBox">
+      <entry key="PreviewExerciseItem">
         <State />
       </entry>
       <entry key="PreviewStepsGoal">
         <State />
       </entry>
-      <entry key="app">
-        <State />
+      <entry key="PreviewWeightChart">
+        <State>
+          <runningDeviceTargetSelectedWithDropDown>
+            <Target>
+              <type value="RUNNING_DEVICE_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="SERIAL_NUMBER" />
+                  <value value="R5CT22J8NJL" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </runningDeviceTargetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-03-23T15:39:40.064061Z" />
+        </State>
       </entry>
-      <entry key="previewQuestionItem">
+      <entry key="app">
         <State />
       </entry>
     </value>

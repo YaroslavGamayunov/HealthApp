@@ -4,15 +4,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.NavigateNext
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,7 +26,7 @@ fun QuestionsItem(
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
     title: String,
-    subTitle: String
+    subTitle: String,
 ) {
     Card(
         modifier = modifier,
@@ -51,10 +49,9 @@ fun QuestionsItem(
                 style = MaterialTheme.typography.bodyLarge
             )
             Spacer(modifier = Modifier.height(12.dp))
-            Button(onClick = onClick) {
+            Button(onClick = onClick, modifier = Modifier.fillMaxWidth()) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text("Перейти в чат")
-                    Icon(Icons.AutoMirrored.Filled.NavigateNext, null)
+                    Text("Перейти")
                 }
             }
         }
@@ -72,8 +69,8 @@ private fun PreviewQuestionItem() {
     ) {
         QuestionsItem(
             modifier = Modifier.weight(1.0f),
-            title = "Задать вопросы ИИ-помощнику",
-            subTitle = "Получите полезные ответы о здоровье",
+            title = "ИИ-помощник",
+            subTitle = "Задайте любой вопрос",
             onClick = {}
         )
 
